@@ -3,7 +3,9 @@
     <head>
         <title> Title </title>
         <script>
-
+            function display(){
+                document.getElementById("div").innerHTML = document.getElementById("input").value;
+            }
         </script>
 
         <style>
@@ -13,7 +15,11 @@
     </head>
 
     <body>
-        <p> Hello </p>
+        <input type = "text" id = "input">
+
+        <button onclick = "display()">Button</button t>
+
+        <div id = "div"> </div>
     </body>
 
 </html>
