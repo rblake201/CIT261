@@ -4,7 +4,7 @@
         <title> Title </title>
         <script>
             function display(){
-                var input = document.getElementById("input").value;
+                var input = document.getElementById("input1").value;
 
                 if(!isNaN(input)){
                     document.getElementById("div").innerHTML = sum(input);
@@ -21,6 +21,21 @@
 
                 return y;
             }
+
+            function add(){
+                var x = document.getElementById("input1").value;
+                var y = document.getElementById("input2").value;
+
+                if (x == "")
+                    x = 0;
+
+                if (y == "")
+                    y = 0;
+
+                var z = parseInt(x) + parseInt(y);
+
+                document.getElementById("div").innerHTML = z;
+            }
         </script>
 
         <style>
@@ -30,9 +45,13 @@
     </head>
 
     <body>
-        <input type = "text" id = "input">
+        <input type = "text" id = "input1">
 
-        <button onclick = "display()">Button</button>
+        <input type = "text" id = "input2">
+
+        <button onclick = "display()">Summate</button>
+
+        <button onclick = "add()">+</button>
 
         <div id = "div"> </div>
     </body>
