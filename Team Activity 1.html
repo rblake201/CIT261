@@ -4,7 +4,22 @@
         <title> Title </title>
         <script>
             function display(){
-                document.getElementById("div").innerHTML = document.getElementById("input").value;
+                var input = document.getElementById("input").value;
+
+                if(!isNaN(input)){
+                    document.getElementById("div").innerHTML = sum(input);
+                }
+            }
+
+            function sum(x){
+                var y = 0;
+
+                for(var i = 1; i <= x; i++)
+                {
+                    y += i;
+                }
+
+                return y;
             }
         </script>
 
@@ -17,7 +32,7 @@
     <body>
         <input type = "text" id = "input">
 
-        <button onclick = "display()">Button</button t>
+        <button onclick = "display()">Button</button>
 
         <div id = "div"> </div>
     </body>
