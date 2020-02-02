@@ -1,0 +1,25 @@
+Week 4 notes<br><br>
+
+Forms<br>
+DOM document.forms returns a collection of all the forms in order of appearance.<br>
+form.submit() to submit form form.reset() to reset al controls back to HTML values<br>
+Text input, radio button, checkbox, ect.<br>
+Form validation can occur client side with JavaScript or server side.<br>
+Disabling the submit button is a form of validation so nothing incorrect is submitted<br><br>
+
+Object Oriented Programming<br>
+Class-based languages vs prototype-based language<br><br>
+
+CONSTRUCTOR FUNCTION:<br>
+const Dice = function(sides=6){<br>
+    this.sides = sides;<br>
+    this.roll = function() {<br>
+        return Math.floor(this.sides * Math.random() + 1)<br>
+    }<br>
+}<br><br>
+
+INSTANCE OF DICE<br>
+const redDice = new Dice();<br>
+<< Dice { sides: 6, roll: [Function] }<br><br>
+
+static, prototype, public vs private
