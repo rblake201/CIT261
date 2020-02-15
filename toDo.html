@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <style>
+    body {
+      color: #333;
+      font-family: Lato, sans-serif;
+      background-color: lightgrey;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    button {
+      margin: 5px;
+    }
+
+    li {
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .hello {
+      background: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>To Do List</h1>
+  <input id="newToDo" />
+  <button onclick="add()">add</button>
+  <br>
+  <ul id="toDoList">Incomplete:</ul>
+  <ul id="comList">Complete:</ul>
+  
+
+  <button onclick="showToDo()">Incomplete</button>
+  <button onclick="showCompletedToDo()">Complete</button>
+  <button onclick="showAll()">All</button>
+
+<script src="toDo.js"></script>
+</body>
+</html>
