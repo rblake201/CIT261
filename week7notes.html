@@ -1,0 +1,30 @@
+Week 7 notes:<br><br>
+
+Call method:<br>
+function sayHello(){<br>
+    return `Hello, my name is ${ this.name }`;<br>
+}<br><br>
+
+const clark = { name: 'Clark' };<br>
+const bruce = { name: 'Bruce' };<br>
+sayHello.call(clark);<br>
+<< 'Hello, my name is Clarke'<br>
+sayHello.call(bruce);<br>
+<< 'Hello, my name is Bruce'<br><br>
+
+Cache can store results of arguments to be more effecient<br>
+For example: square(3) << 9<br>
+             square.cache; << {"3", 9}<br><br>
+             
+AnImmediately Invoked Function Expression– or IIFE – (pronounced 'iffy') is an anonymous function that, as the name suggests, is<br>
+invoked as soon as it’s defined. This is easily achieved by placing parentheses at the end of the function definition (remember<br>
+we use parentheses to invoke a function). The function also has to be made into an expression, which is done by placing the whole<br>
+declaration inside parentheses, as in this example:<br><br>
+
+(function(){<br>
+const temp = 'World';<br>
+console.log(`Hello ${temp}`);<br>
+})();<br>
+<< 'Hello World'<br><br>
+
+Recursive functions: similar to a loop
