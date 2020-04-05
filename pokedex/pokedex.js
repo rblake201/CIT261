@@ -45,7 +45,7 @@ function displayPokemon() {
       pokeCard.innerHTML = pokeInnerHTML;
       pokedex.appendChild(pokeCard);
     }
-  }, 1000);
+  }, 2000);
 }
 
 function selectPokemon(id) {
