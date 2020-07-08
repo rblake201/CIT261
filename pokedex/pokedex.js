@@ -1,9 +1,9 @@
 var pokeArray = [];
 
-function fetchPokemon() {
+async function fetchPokemon() {
   for (let i = 1; i < 151; i++) {
     const url = "https://pokeapi.co/api/v2/pokemon/" + i;
-    fetch(url)
+    await fetch(url)
       .then(response => {
         return response.json();
       })
@@ -20,7 +20,6 @@ function fetchPokemon() {
 }
 
 function displayPokemon() {
-  setTimeout(function() {
     for (let i = 0; i < 150; i++) {
       const pokeInnerHTML = `
       <div class="flex-item" onclick="selectPokemon(${pokeArray[i].id})">
@@ -45,7 +44,11 @@ function displayPokemon() {
       pokeCard.innerHTML = pokeInnerHTML;
       pokedex.appendChild(pokeCard);
     }
-  }, 3000);
+}
+
+async function await(){
+    await this.fetchPokemon();
+    displayPokemon();
 }
 
 function selectPokemon(id) {
@@ -101,5 +104,4 @@ function closePopup() {
   popup.parentElement.removeChild(popup);
 }
 
-fetchPokemon();
-displayPokemon();
+await();
